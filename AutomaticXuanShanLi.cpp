@@ -290,13 +290,15 @@ void AutomaticXuanShanLi::on_check_clicked()
 			filepath.endsWith(".c", Qt::CaseInsensitive) ||
 			filepath.endsWith(".cpp", Qt::CaseInsensitive) ||
 			filepath.endsWith(".h", Qt::CaseInsensitive) ||
-			filepath.endsWith(".hpp", Qt::CaseInsensitive)
+			filepath.endsWith(".hpp", Qt::CaseInsensitive) ||
+			filepath.endsWith(".exe", Qt::CaseInsensitive)
 			) {
 			QString filename = filepath.right(filepath.length() - filepath.lastIndexOf("/") - 1);
 			filename.remove(".c", Qt::CaseInsensitive);
 			filename.remove(".cpp", Qt::CaseInsensitive);
 			filename.remove(".h", Qt::CaseInsensitive);
 			filename.remove(".hpp", Qt::CaseInsensitive);
+			filename.remove(".exe", Qt::CaseInsensitive);
 			if (filename.size() == 4) {
 				for (int j = 0; j < 4; j++) {
 					if (filename.at(j) < '0' || filename.at(j) > '9') {
