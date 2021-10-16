@@ -19,6 +19,7 @@
 #include "UploadThread.h"
 #include <QInputDialog>
 #include "Poco/Version.h"
+#include <QDesktopServices>
 
 namespace Ui { class AutomaticXuanShanLiClass; }
 
@@ -36,6 +37,8 @@ private:
 	QToolButton* configb = nullptr;
 	QToolButton* aboutb = nullptr;
 	QToolButton* aboutQtb = nullptr;
+	QToolButton* sourceb = nullptr;
+
 	QLabel* tipl = nullptr;
 
 	QByteArray insertAuto(QByteArray data, QString note);
@@ -46,6 +49,7 @@ private slots:
 	void on_config();
 	void on_about();
 	void on_aboutQt();
+	void on_source();
 
 	void on_add_clicked();
 	void on_remove_clicked();

@@ -14,16 +14,19 @@ AutomaticXuanShanLi::AutomaticXuanShanLi(QWidget* parent)
 	this->configb = new QToolButton(this);
 	this->aboutb = new QToolButton(this);
 	this->aboutQtb = new QToolButton(this);
+	this->sourceb = new QToolButton(this);
 
 	this->tipl = new QLabel(this);
 
 	this->configb->setText("设置");
 	this->aboutb->setText("关于");
 	this->aboutQtb->setText("关于Qt");
+	this->sourceb->setText("开源页面");
 
 	ui->mainToolBar->addWidget(this->configb);
 	ui->mainToolBar->addWidget(this->aboutb);
 	ui->mainToolBar->addWidget(this->aboutQtb);
+	ui->mainToolBar->addWidget(this->sourceb);
 
 	this->tipl->setText("就绪");
 
@@ -32,6 +35,7 @@ AutomaticXuanShanLi::AutomaticXuanShanLi(QWidget* parent)
 	connect(this->configb, &QToolButton::clicked, this, &AutomaticXuanShanLi::on_config);
 	connect(this->aboutb, &QToolButton::clicked, this, &AutomaticXuanShanLi::on_about);
 	connect(this->aboutQtb, &QToolButton::clicked, this, &AutomaticXuanShanLi::on_aboutQt);
+	connect(this->sourceb, &QToolButton::clicked, this, &AutomaticXuanShanLi::on_source);
 }
 
 AutomaticXuanShanLi::~AutomaticXuanShanLi()
@@ -39,6 +43,7 @@ AutomaticXuanShanLi::~AutomaticXuanShanLi()
 	if (this->uThread != nullptr) {
 		delete this->uThread;
 	}
+	delete this->sourceb;
 	delete this->tipl;
 	delete this->aboutQtb;
 	delete this->aboutb;
@@ -72,6 +77,11 @@ void AutomaticXuanShanLi::on_about()
 void AutomaticXuanShanLi::on_aboutQt()
 {
 	QMessageBox::aboutQt(this, "关于Qt");
+}
+
+void AutomaticXuanShanLi::on_source()
+{
+	QDesktopServices::openUrl(QUrl(QLatin1String("https://github.com/FangCunWuChang/AutomaticXuanShanLi")));
 }
 
 void AutomaticXuanShanLi::on_add_clicked()
