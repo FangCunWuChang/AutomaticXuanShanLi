@@ -1,0 +1,16 @@
+// 提示文件帮助 Visual Studio IDE 解释 Visual C++ 标识符,
+// 如函数和宏的名称。
+// 有关详细信息，请参见 https://go.microsoft.com/fwlink/?linkid=865984
+#define Q_OBJECT
+#define QT_BEGIN_NAMESPACE
+#define QT_BEGIN_NAMESPACE namespace QT_NAMESPACE {
+#define slots
+#define QT_END_NAMESPACE
+#define QT_END_NAMESPACE }
+#define Q_SLOTS QT_ANNOTATE_ACCESS_SPECIFIER(qt_slot)
+#define Q_SLOTS
+#define Q_PRIVATE_SLOT(d, signature) QT_ANNOTATE_CLASS2(qt_private_slot, d, signature)
+#define Q_DISABLE_COPY(Class) Class(const Class &) = delete; Class &operator=(const Class &) = delete;
+#define Q_DECLARE_PUBLIC(Class) inline Class* q_func() { return static_cast<Class *>(q_ptr); } inline const Class* q_func() const { return static_cast<const Class *>(q_ptr); } friend class Class;
+#define Q_SIGNALS public QT_ANNOTATE_ACCESS_SPECIFIER(qt_signal)
+#define Q_SIGNALS

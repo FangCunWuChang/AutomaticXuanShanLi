@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutomaticXuanShanLi", "AutomaticXuanShanLi.vcxproj", "{E535FB4B-7A9D-49FE-89A2-D5862847A780}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E535FB4B-7A9D-49FE-89A2-D5862847A780}.Debug|x64.ActiveCfg = Debug|x64
+		{E535FB4B-7A9D-49FE-89A2-D5862847A780}.Debug|x64.Build.0 = Debug|x64
+		{E535FB4B-7A9D-49FE-89A2-D5862847A780}.Release|x64.ActiveCfg = Release|x64
+		{E535FB4B-7A9D-49FE-89A2-D5862847A780}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D88F9BD7-1F5B-4712-9EBB-8DAF1DD43119}
+	EndGlobalSection
+EndGlobal

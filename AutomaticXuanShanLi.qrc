@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/AutomaticXuanShanLi">
+        <file>Logo.jpg</file>
+    </qresource>
+</RCC>
