@@ -105,7 +105,7 @@ void AutomaticXuanShanLi::on_add_clicked()
 
 	ui->output->clear();
 	this->tipl->setText("添加文件");
-	QStringList fileList = QFileDialog::getOpenFileNames(this, "添加文件", QDir::currentPath(), "作业允许的文件 (*.c *.h *.cpp *.hpp *.doc *.docx);;所有文件 (*)");
+	QStringList fileList = QFileDialog::getOpenFileNames(this, "添加文件", QDir::currentPath(), "作业允许的文件 (*.c *.h *.cpp *.hpp *.doc *.docx *.exe);;所有文件 (*)");
 	if (fileList.size() > 0) {
 		QFileInfo fileInfo(fileList.at(0));
 		QDir::setCurrent(fileInfo.absolutePath());
