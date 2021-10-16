@@ -294,11 +294,24 @@ void AutomaticXuanShanLi::on_check_clicked()
 			filepath.endsWith(".exe", Qt::CaseInsensitive)
 			) {
 			QString filename = filepath.right(filepath.length() - filepath.lastIndexOf("/") - 1);
-			filename.remove(".c", Qt::CaseInsensitive);
-			filename.remove(".cpp", Qt::CaseInsensitive);
-			filename.remove(".h", Qt::CaseInsensitive);
-			filename.remove(".hpp", Qt::CaseInsensitive);
-			filename.remove(".exe", Qt::CaseInsensitive);
+			if (filename.endsWith(".c", Qt::CaseInsensitive)) {
+				filename = filename.left(filename.size() - 2);
+			}
+			else if (filename.endsWith(".cpp", Qt::CaseInsensitive)) {
+				filename = filename.left(filename.size() - 4);
+			}
+			else if (filename.endsWith(".h", Qt::CaseInsensitive)) {
+				filename = filename.left(filename.size() - 2);
+			}
+			else if (filename.endsWith(".hpp", Qt::CaseInsensitive)) {
+				filename = filename.left(filename.size() - 4);
+			}
+			else if (filename.endsWith(".exe", Qt::CaseInsensitive)) {
+				filename = filename.left(filename.size() - 4);
+			}
+			else {
+
+			}
 			if (filename.size() == 4) {
 				for (int j = 0; j < 4; j++) {
 					if (filename.at(j) < '0' || filename.at(j) > '9') {
